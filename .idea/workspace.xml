@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/portal/reports.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htdocs/css/portal/reports.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Portal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Portal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Call_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Call_Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/portal/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/portal/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/reports.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
       <workItem from="1588774526706" duration="5128000" />
       <workItem from="1588791291164" duration="22142000" />
       <workItem from="1588829355501" duration="8594000" />
-      <workItem from="1588859655980" duration="14754000" />
+      <workItem from="1588859655980" duration="20866000" />
     </task>
     <task id="LOCAL-00001" summary="datatable being fed from MySQL DB">
       <created>1588817118616</created>
@@ -77,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588837637700</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="report UI built with exception of date range selector">
+      <created>1588875477085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588875477085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,13 +91,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="datatable being fed from MySQL DB" />
     <MESSAGE value="dashboard table &amp; line graph operational" />
-    <option name="LAST_COMMIT_MESSAGE" value="dashboard table &amp; line graph operational" />
+    <MESSAGE value="report UI built with exception of date range selector" />
+    <option name="LAST_COMMIT_MESSAGE" value="report UI built with exception of date range selector" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588837636741">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588875476119">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588837636741" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588875476119" />
     <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

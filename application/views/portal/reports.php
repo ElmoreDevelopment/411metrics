@@ -758,12 +758,24 @@
     };
 
     $(document).ready(function(){
-       let calls_per_day = new Highcharts.Chart(calls_per_day_options);
-       let calls_per_day_by_camp = new Highcharts.Chart(calls_per_day_by_camp_options);
-       let avg_calls_per_day_by_camp = new Highcharts.Chart(avg_calls_per_day_by_camp_options);
-       let total_calls_by_camp = new Highcharts.Chart(total_calls_by_camp_options);
-       let avg_call_duration_by_camp = new Highcharts.Chart(avg_call_duration_by_camp_options);
-       let time_hotspots = new Highcharts.Chart(time_hotspots_options);
+        let dt = new Date(Date.parse('2017-05-05T18:59:00'));
+        let utcDt = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate()) / 1000;
+
+        $.ajax({
+            url: 'http://10.0.0.27/codeigniter/index.php/portal/get_calls_for_charts/',
+            type: 'POST',
+            data: {start_date: utcDt},
+            success: function(result){
+                console.log(result);
+            }
+        });
+
+       // let calls_per_day = new Highcharts.Chart(calls_per_day_options);
+       // let calls_per_day_by_camp = new Highcharts.Chart(calls_per_day_by_camp_options);
+       // let avg_calls_per_day_by_camp = new Highcharts.Chart(avg_calls_per_day_by_camp_options);
+       // let total_calls_by_camp = new Highcharts.Chart(total_calls_by_camp_options);
+       // let avg_call_duration_by_camp = new Highcharts.Chart(avg_call_duration_by_camp_options);
+       // let time_hotspots = new Highcharts.Chart(time_hotspots_options);
     });
 </script>
 

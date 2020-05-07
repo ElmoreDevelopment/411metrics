@@ -47,8 +47,19 @@ class Portal extends CI_Controller {
         $this->load->view('portal/dashboard', $data);
     }
 
-    public function get_calls(){
-	    $this->load->model('call_model');
-	    $all_calls = $this->call_model->get_all_calls();
+    public function reports() {
+        $this->load->model('call_model');
+        $all_calls = $this->call_model->get_all_calls();
+
+        $portal_vars = $this->portal_vars;
+        $data = ['portal_vars' => $portal_vars, 'calls' => $all_calls];
+        $this->load->view('portal/reports', $data);
+    }
+
+    public function get_calls_for_charts(){
+	    $post = $this->input->post();
+
+        $this->load->model('call_model');
+        $all_calls = $this->call_model->get_calls_for_charts($post);
     }
 }
