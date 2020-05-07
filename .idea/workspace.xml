@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/Portal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Call_Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/landing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/portal/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/httpd-app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/httpd-app.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/portal/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/dashboard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="3eb13574-3847-45ff-8bc1-42e12cc5e3ba" />
@@ -50,14 +41,31 @@
       <option name="presentableId" value="Default" />
       <updated>1588774525394</updated>
       <workItem from="1588774526706" duration="5128000" />
-      <workItem from="1588791291164" duration="21988000" />
+      <workItem from="1588791291164" duration="22142000" />
+      <workItem from="1588829355501" duration="8241000" />
     </task>
+    <task id="LOCAL-00001" summary="datatable being fed from MySQL DB">
+      <created>1588817118616</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588817118616</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="datatable being fed from MySQL DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="datatable being fed from MySQL DB" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588817117691">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588817117691" />
     <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -52,243 +52,57 @@
 
 <!-- ===================================== END HEADER ===================================== -->
 <div id="content">
-    <div id="line" style="width: 95%; margin: 63px auto;" data-highcharts-chart="0">
-        <div class="highcharts-container" id="highcharts-0"
-             style="position: relative; overflow: hidden; width: 1824px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
-            <svg version="1.1"
-                 style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;"
-                 xmlns="http://www.w3.org/2000/svg" width="1824" height="400">
-                <desc>Created with Highcharts 4.0.1</desc>
-                <defs>
-                    <linearGradient x1="0" y1="0" x2="1" y2="1" id="highcharts-1">
-                        <stop offset="0" stop-color="#171d25" stop-opacity="1"></stop>
-                        <stop offset="1" stop-color="#171d25" stop-opacity="1"></stop>
-                    </linearGradient>
-                    <clipPath id="highcharts-2">
-                        <rect x="0" y="0" width="1754" height="263"></rect>
-                    </clipPath>
-                </defs>
-                <rect x="0" y="0" width="1824" height="400" strokeWidth="0" fill="url(#highcharts-1)"
-                      class=" highcharts-background"></rect>
-                <g class="highcharts-button" style="cursor:default;" stroke-linecap="round"
-                   transform="translate(1790,10)"><title>Chart context menu</title>
-                    <rect x="0.5" y="0.5" width="24" height="22" strokeWidth="1" fill="#171d25" stroke-width="1"
-                          stroke="none" rx="0" ry="0"></rect>
-                    <path fill="#E0E0E0" d="M 6 6.5 L 20 6.5 M 6 11.5 L 20 11.5 M 6 16.5 L 20 16.5" stroke="#666"
-                          stroke-width="3" zIndex="1"></path>
-                    <text x="0" zIndex="1" style="color:black;fill:black;" y="13"></text>
-                </g>
-                <path fill="rgba(67,67,72,0.25)"
-                      d="M 814.1708683473389 177.5 C 827.490868347339 177.5 827.490868347339 197.5 814.1708683473389 197.5 C 800.8508683473389 197.5 800.8508683473389 177.5 814.1708683473389 177.5 Z"></path>
-                <path fill="rgba(144,238,126,0.25)"
-                      d="M 814.1708683473389 177.5 C 827.490868347339 177.5 827.490868347339 197.5 814.1708683473389 197.5 C 800.8508683473389 197.5 800.8508683473389 177.5 814.1708683473389 177.5 Z"></path>
-                <g class="highcharts-grid" zIndex="1"></g>
-                <g class="highcharts-grid" zIndex="1">
-                    <path fill="none" d="M 60 188.5 L 1814 188.5" stroke="#707073" stroke-width="1" zIndex="1"
-                          opacity="1"></path>
-                </g>
-                <g class="highcharts-axis" zIndex="2">
-                    <path fill="none" d="M 322.5 319 L 322.5 329" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
-                    <path fill="none" d="M 568.5 319 L 568.5 329" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
-                    <path fill="none" d="M 813.5 319 L 813.5 329" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
-                    <path fill="none" d="M 1059.5 319 L 1059.5 329" stroke="#C0D0E0" stroke-width="1"
-                          opacity="1"></path>
-                    <path fill="none" d="M 1304.5 319 L 1304.5 329" stroke="#C0D0E0" stroke-width="1"
-                          opacity="1"></path>
-                    <path fill="none" d="M 1550.5 319 L 1550.5 329" stroke="#C0D0E0" stroke-width="1"
-                          opacity="1"></path>
-                    <path fill="none" d="M 1796.5 319 L 1796.5 329" stroke="#C0D0E0" stroke-width="1"
-                          opacity="1"></path>
-                    <path fill="none" d="M 76.5 319 L 76.5 329" stroke="#C0D0E0" stroke-width="1" opacity="1"></path>
-                    <path fill="none" d="M 60 319.5 L 1814 319.5" stroke="#C0D0E0" stroke-width="1" zIndex="7"
-                          visibility="visible"></path>
-                </g>
-                <g class="highcharts-axis" zIndex="2">
-                    <text x="27.984375" zIndex="7" text-anchor="middle"
-                          transform="translate(0,0) rotate(270 27.984375 187.5)" class=" highcharts-yaxis-title"
-                          style="color:#707070;fill:#707070;" visibility="visible" y="187.5">Calls/Day
-                    </text>
-                </g>
-                <g class="highcharts-series-group" zIndex="3">
-                    <g class="highcharts-series" visibility="visible" zIndex="0.1"
-                       transform="translate(60,56) scale(1 1)" clip-path="url(#highcharts-2)">
-                        <path fill="rgba(67,67,72,0.5)"
-                              d="M 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5 L 1736.8039215686274 131.5 L 17.19607843137255 131.5"
-                              zIndex="0"></path>
-                        <path fill="none"
-                              d="M 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5"
-                              stroke="#434348" stroke-width="2" zIndex="1" stroke-linejoin="round"
-                              stroke-linecap="round"></path>
-                        <path fill="none"
-                              d="M 7.196078431372548 131.5 L 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5 L 1746.8039215686274 131.5"
-                              stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)"
-                              stroke-width="22" zIndex="2" class=" highcharts-tracker" style="cursor:pointer;"></path>
-                    </g>
-                    <g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1"
-                       transform="translate(60,56) scale(1 1)" clip-path="none" style="cursor:pointer;">
-                        <path fill="#434348"
-                              d="M 1736 127.5 C 1741.328 127.5 1741.328 135.5 1736 135.5 C 1730.672 135.5 1730.672 127.5 1736 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 1491 127.5 C 1496.328 127.5 1496.328 135.5 1491 135.5 C 1485.672 135.5 1485.672 127.5 1491 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 1245.4873949579833 127.5 C 1250.8153949579832 127.5 1250.8153949579832 135.5 1245.4873949579833 135.5 C 1240.1593949579833 135.5 1240.1593949579833 127.5 1245.4873949579833 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 999.8291316526611 127.5 C 1005.1571316526611 127.5 1005.1571316526611 135.5 999.8291316526611 135.5 C 994.5011316526611 135.5 994.5011316526611 127.5 999.8291316526611 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 754.1708683473389 125.5 C 762.1628683473389 125.5 762.1628683473389 137.5 754.1708683473389 137.5 C 746.178868347339 137.5 746.178868347339 125.5 754.1708683473389 125.5 Z"
-                              stroke="#FFFFFF" stroke-width="1"></path>
-                        <path fill="#434348"
-                              d="M 508 127.5 C 513.328 127.5 513.328 135.5 508 135.5 C 502.672 135.5 502.672 127.5 508 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 262 127.5 C 267.328 127.5 267.328 135.5 262 135.5 C 256.672 135.5 256.672 127.5 262 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#434348"
-                              d="M 17 127.5 C 22.328 127.5 22.328 135.5 17 135.5 C 11.672 135.5 11.672 127.5 17 127.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                    </g>
-                    <g class="highcharts-series" visibility="visible" zIndex="0.1"
-                       transform="translate(60,56) scale(1 1)" clip-path="url(#highcharts-2)">
-                        <path fill="rgba(144,238,126,0.5)"
-                              d="M 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5 L 1736.8039215686274 131.5 L 17.19607843137255 131.5"
-                              zIndex="0"></path>
-                        <path fill="none"
-                              d="M 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5"
-                              stroke="#90ee7e" stroke-width="2" zIndex="1" stroke-linejoin="round"
-                              stroke-linecap="round"></path>
-                        <path fill="none"
-                              d="M 7.196078431372548 131.5 L 17.19607843137255 131.5 C 17.19607843137255 131.5 164.59103641456582 131.5 262.85434173669466 131.5 C 361.11764705882354 131.5 410.249299719888 131.5 508.5126050420168 131.5 C 606.7759103641456 131.5 655.90756302521 131.5 754.1708683473389 131.5 C 852.4341736694678 131.5 901.5658263305322 131.5 999.8291316526611 131.5 C 1098.09243697479 131.5 1147.2240896358544 131.5 1245.4873949579833 131.5 C 1343.7507002801121 131.5 1392.8823529411764 131.5 1491.1456582633052 131.5 C 1589.4089635854339 131.5 1736.8039215686274 131.5 1736.8039215686274 131.5 L 1746.8039215686274 131.5"
-                              stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)"
-                              stroke-width="22" zIndex="2" class=" highcharts-tracker" style="cursor:pointer;"></path>
-                    </g>
-                    <g class="highcharts-markers highcharts-tracker" visibility="visible" zIndex="0.1"
-                       transform="translate(60,56) scale(1 1)" clip-path="none" style="cursor:pointer;">
-                        <path fill="#90ee7e" d="M 1736 127.5 L 1740 131.5 1736 135.5 1732 131.5 Z" stroke="#FFFFFF"
-                              stroke-width="0.00001"></path>
-                        <path fill="#90ee7e" d="M 1491 127.5 L 1495 131.5 1491 135.5 1487 131.5 Z" stroke="#FFFFFF"
-                              stroke-width="0.00001"></path>
-                        <path fill="#90ee7e"
-                              d="M 1245.4873949579833 127.5 L 1249.4873949579833 131.5 1245.4873949579833 135.5 1241.4873949579833 131.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#90ee7e"
-                              d="M 999.8291316526611 127.5 L 1003.8291316526611 131.5 999.8291316526611 135.5 995.8291316526611 131.5 Z"
-                              stroke="#FFFFFF" stroke-width="0.00001"></path>
-                        <path fill="#90ee7e"
-                              d="M 754.1708683473389 125.5 L 760.1708683473389 131.5 754.1708683473389 137.5 748.1708683473389 131.5 Z"
-                              stroke="#FFFFFF" stroke-width="1"></path>
-                        <path fill="#90ee7e" d="M 508 127.5 L 512 131.5 508 135.5 504 131.5 Z" stroke="#FFFFFF"
-                              stroke-width="0.00001"></path>
-                        <path fill="#90ee7e" d="M 262 127.5 L 266 131.5 262 135.5 258 131.5 Z" stroke="#FFFFFF"
-                              stroke-width="0.00001"></path>
-                        <path fill="#90ee7e" d="M 17 127.5 L 21 131.5 17 135.5 13 131.5 Z" stroke="#FFFFFF"
-                              stroke-width="0.00001"></path>
-                    </g>
-                </g>
-                <text x="912" text-anchor="middle" class="highcharts-title" zIndex="4"
-                      style="color:#788b94;font-size:20px;fill:#788b94;width:1760px;" y="25">
-                    <tspan>Week Overview: Calls Per Day</tspan>
-                </text>
-                <g class="highcharts-legend" zIndex="7" transform="translate(806,364)">
-                    <g zIndex="1">
-                        <g>
-                            <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
-                                <text x="21" y="15"
-                                      style="color:#E0E0E3;font-size:12px;font-weight:bold;cursor:pointer;fill:#E0E0E3;"
-                                      text-anchor="start" zIndex="2">
-                                    <tspan>Total Calls</tspan>
-                                </text>
-                                <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#434348"></rect>
-                            </g>
-                            <g class="highcharts-legend-item" zIndex="1" transform="translate(114.375,3)">
-                                <text x="21" y="15"
-                                      style="color:#E0E0E3;font-size:12px;font-weight:bold;cursor:pointer;fill:#E0E0E3;"
-                                      text-anchor="start" zIndex="2">
-                                    <tspan>Unique Calls</tspan>
-                                </text>
-                                <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#90ee7e"></rect>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-                <g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7">
-                    <text x="77.19607843137254" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>Apr 29</tspan>
-                    </text>
-                    <text x="322.85434173669466" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>Apr 30</tspan>
-                    </text>
-                    <text x="568.5126050420167" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 1</tspan>
-                    </text>
-                    <text x="814.1708683473389" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 2</tspan>
-                    </text>
-                    <text x="1059.829131652661" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 3</tspan>
-                    </text>
-                    <text x="1305.4873949579833" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 4</tspan>
-                    </text>
-                    <text x="1551.1456582633052" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 5</tspan>
-                    </text>
-                    <text x="1796.8039215686274" text-anchor="middle"
-                          style="color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="339" opacity="1">
-                        <tspan>May 6</tspan>
-                    </text>
-                </g>
-                <g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7">
-                    <text x="45" text-anchor="end"
-                          style="width:582px;color:#E0E0E3;cursor:default;font-size:11px;fill:#E0E0E3;" y="191"
-                          opacity="1">0
-                    </text>
-                </g>
-                <g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;"
-                   transform="translate(673,29)" opacity="1" visibility="visible">
-                    <path fill="none"
-                          d="M 3.5 0.5 L 122.5 0.5 C 125.5 0.5 125.5 0.5 125.5 3.5 L 125.5 61.5 C 125.5 64.5 125.5 64.5 122.5 64.5 L 3.5 64.5 C 0.5 64.5 0.5 64.5 0.5 61.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
-                          stroke-width="5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996"
-                          transform="translate(1, 1)" width="125" height="64"></path>
-                    <path fill="none"
-                          d="M 3.5 0.5 L 122.5 0.5 C 125.5 0.5 125.5 0.5 125.5 3.5 L 125.5 61.5 C 125.5 64.5 125.5 64.5 122.5 64.5 L 3.5 64.5 C 0.5 64.5 0.5 64.5 0.5 61.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
-                          stroke-width="3" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999"
-                          transform="translate(1, 1)" width="125" height="64"></path>
-                    <path fill="none"
-                          d="M 3.5 0.5 L 122.5 0.5 C 125.5 0.5 125.5 0.5 125.5 3.5 L 125.5 61.5 C 125.5 64.5 125.5 64.5 122.5 64.5 L 3.5 64.5 C 0.5 64.5 0.5 64.5 0.5 61.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
-                          stroke-width="1" isShadow="true" stroke="black" stroke-opacity="0.15"
-                          transform="translate(1, 1)" width="125" height="64"></path>
-                    <path fill="rgba(249, 249, 249, .85)"
-                          d="M 3.5 0.5 L 122.5 0.5 C 125.5 0.5 125.5 0.5 125.5 3.5 L 125.5 61.5 C 125.5 64.5 125.5 64.5 122.5 64.5 L 3.5 64.5 C 0.5 64.5 0.5 64.5 0.5 61.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
-                          stroke-width="1" stroke="#434348"></path>
-                    <text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21">
-                        <tspan style="font-size: 10px">Saturday, May 2, 2020</tspan>
-                        <tspan style="fill:#434348" x="8" dy="16">●</tspan>
-                        <tspan dx="0"> Total Calls:</tspan>
-                        <tspan style="font-weight:bold" dx="0">0</tspan>
-                        <tspan style="fill:#90ee7e" x="8" dy="16">●</tspan>
-                        <tspan dx="0"> Unique Calls:</tspan>
-                        <tspan style="font-weight:bold" dx="0">0</tspan>
-                    </text>
-                </g>
-            </svg>
-        </div>
-    </div>
+    <div id="line" style="width: 95%; margin: 63px auto;"></div>
     <script type="text/javascript">
-        //intial load of call_line
-        $(document).ready(function () {
+        let days_in_week = 7;
+        let total_week_calls = [];
+        let unique_week_calls = [];
+        let total_line_data = [];
+        let unique_line_data = [];
+        let d = new Date();
+        for(let count = 1; count <= days_in_week; count++){
+            d.setDate(d.getDate() - 1);
+            let year = d.getFullYear().toString();
+            let month = d.getMonth().toString();
+            if(month.length < 2){
+                month = "0" + month;
+            }
+
+            let day = d.getDate().toString();
+            if(day.length < 2){
+                day = "0" + day;
+            }
+
+            let index = year.toString() + month.toString() + day.toString();
+            total_week_calls[index] = 0;
+            unique_week_calls[index] = [];
+        }
+
+        for(let i = 0; i < days_in_week; i++){
+            total_line_data.push(0);
+            unique_line_data.push(0);
+        }
+
+
+        function loadChart(){
             $("#line");
-            var options = {
+
+            let counter = 0;
+            for(let entry in total_week_calls){
+                total_line_data[counter] = total_week_calls[entry];
+                counter++;
+            }
+
+            let unique_counter = 0;
+            for(let entry in unique_week_calls){
+                let phones = unique_week_calls[entry];
+                unique_line_data[unique_counter] = phones.length;
+                unique_counter++;
+            }
+
+            let d = new Date();
+            d.setDate(d.getDate() - days_in_week);
+            let options = {
                 chart: {
                     backgroundColor: {
                         linearGradient: {x1: 0, y1: 0, x2: 1, y2: 1},
@@ -301,7 +115,7 @@
                     renderTo: 'line',
                     plotBorderColor: '#606063'
                 },
-                colors: ["#434348", "#90ee7e", "#434348", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+                colors: ["#434348", "#4FC2F0", "#434348", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
                     "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
                 credits: {
                     enabled: false
@@ -335,7 +149,7 @@
                 },
                 xAxis: {
                     type: 'datetime',
-                    tickPixelInterval: 200,
+                    tickPixelInterval: 300,
                     labels: {
                         style: {
                             color: '#E0E0E3'
@@ -377,45 +191,60 @@
                         fillOpacity: 0.5
                     }
                 },
-                series: [{}, {}]
+                series: [
+                    {
+                        name: 'Total Calls',
+                        data: total_line_data,
+                        pointStart: Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate()),
+                        pointInterval: 24 * 3600 * 1000
+                    },
+                    {
+                        name: 'Unique Calls',
+                        data: unique_line_data,
+                        pointStart: Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate()),
+                        pointInterval: 24 * 3600 * 1000
+                    }
+                ]
             };
 
-            // $.ajax({
-            //     url: "/Portal/statistic/JSON_call_line",
-            //     data: 'testdata',
-            //     type: 'post',
-            //     dataType: "json",
-            //     success: function (data) {
-            //         //options.xAxis.categories = data.categories;
-            //         var d = new Date();
-            //         d.setDate(d.getDate() - 7);
-            //         options.series[0].name = 'Total Calls';
-            //         options.series[0].data = data.calls;
-            //         options.series[0].pointStart = Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate());
-            //         options.series[0].pointInterval = 24 * 3600 * 1000;
-            //         options.series[1].name = 'Unique Calls';
-            //         options.series[1].data = data.unique;
-            //         options.series[1].pointStart = Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate());
-            //         options.series[1].pointInterval = 24 * 3600 * 1000;
-            //         var chart = new Highcharts.Chart(options);
-            //     }
-            // });
+            let chart = new Highcharts.Chart(options);
+        }
 
-        });
+        function addToCalls(timestamp, phone){
+            let dt = new Date(timestamp);
+            let year = dt.getFullYear().toString();
+            let month = dt.getMonth().toString();
 
-        $(document).ready(function(){
-            // $.ajax({
-            //     url: "http://10.0.0.27/codeigniter/index.php/portal/get_calls",
-            //     method: "GET",
-            //     success: function(result){
-            //         console.log(result);
-            //     }
-            // })
-        })
+            if(month.length < 2){
+                month = "0" + month;
+            }
+
+            let day = dt.getDate().toString();
+            if(day.length < 2){
+                day = "0" + day;
+            }
+            let index = year.toString() + month.toString() + day.toString();
+            total_week_calls[index] = total_week_calls[index] + 1;
+
+            let phones = unique_week_calls[index];
+            if(!phones.includes(phone.replace(/\D/g,''))){
+                phones.push(phone.replace(/\D/g,''));
+            }
+
+            unique_week_calls[index] = phones;
+        }
 
         async function editDateTimes(){
+            let d = new Date();
+            let end_date = Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate());
+            d.setDate(d.getDate() - days_in_week);
+            let start_date = Date.UTC(d.getFullYear(), d.getUTCMonth(), d.getUTCDate());
             $('#example').find('tr').each(function(){
                 let timestamp = parseInt($(this).find('.date').text()) * 1000;
+                if(start_date <= timestamp && timestamp <= end_date){
+                    addToCalls(timestamp, $(this).find('.caller_number').text());
+                }
+
                 let dt = new Date(timestamp);
                 let date = months[dt.getMonth()] + " " + dt.getDate() + ", " + dt.getFullYear();
                 let hours = dt.getHours();
@@ -439,6 +268,7 @@
                 $(this).find('.date').text(date);
                 $(this).find('.time').text(time);
             });
+            loadChart();
         }
     </script>
 
@@ -446,6 +276,8 @@
 
         $(document).ready(function () {
             editDateTimes().then((value) => {
+
+
                 $('#example').dataTable({
                 aaSorting: [[0, 'desc']],
                 "iDisplayLength": 15,
