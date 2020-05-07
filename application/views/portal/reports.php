@@ -757,16 +757,21 @@
         ]
     };
 
+
     $(document).ready(function(){
-        let dt = new Date(Date.parse('2017-05-05T18:59:00'));
+        let dt = new Date(Date.parse('2020-05-01T18:59:00'));
+        let localDt = new Date();
         let utcDt = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate()) / 1000;
+        let tz_offset = localDt.getTimezoneOffset();
 
         $.ajax({
             url: 'http://10.0.0.27/codeigniter/index.php/portal/get_calls_for_charts/',
             type: 'POST',
-            data: {start_date: utcDt},
+            data: {start_date: utcDt, tz_offset: tz_offset},
             success: function(result){
-                console.log(result);
+                let return_array = jQuery.parseJSON(result);
+                parseCallsPerDay(return_array['calls_per_day']);
+                console.log(return_array);
             }
         });
 
@@ -777,6 +782,12 @@
        // let avg_call_duration_by_camp = new Highcharts.Chart(avg_call_duration_by_camp_options);
        // let time_hotspots = new Highcharts.Chart(time_hotspots_options);
     });
+
+    function parseCallsPerDay(calls_per_day){
+        let total_calls = calls_per_day['total_calls'];
+        let unique_calls = calls_per_day['unique_calls'];
+
+    }
 </script>
 
 </body>

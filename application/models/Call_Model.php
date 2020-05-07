@@ -35,6 +35,14 @@ class Call_Model extends CI_Model {
             $start_date = $post_data['start_date'];
         }
 
+        if(isset($post_data['end_date'])){
+            $end_date = $post_data['end_date'];
+        }
+
+        if(isset($post_data['tz_offset'])){
+            $tz_offset = $post_data['tz_offset'] * 60;
+        }
+
         if($end_date == 0){
             $end_date = time() + 86400;
         }
@@ -47,25 +55,65 @@ class Call_Model extends CI_Model {
             'unique_calls' => []
         ];
 
+        $return_array = [
+            'calls_per_day' => [],
+            'calls_per_day_by_camp' => []
+        ];
+
         $calls_per_day_by_camp = [];
         $avg_calls_per_day_by_campaign = [];
         $total_calls_by_campaign = [];
         $avg_call_duration_by_campaign = [];
-        $time_hotspots = [];
+        $time_hotspots = [
+            'total'=> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+        $durations = [];
 
         foreach($query->result() as $row){
             $start_time = $row->start_time;
             $end_time = $row->end_time;
             $duration_seconds = $end_time - $start_time;
+
+            $start_time_minus_offset = $start_time - $tz_offset;
+            $hour = date("g", $start_time_minus_offset);
+
             $duration = gmdate("H:i:s", $duration_seconds);
+            $source_name = $row->source_name;
 
             $day_index = strtotime(date('F j, Y', $start_time));
 
+            if(!array_key_exists($source_name, $calls_per_day_by_camp)){
+                $calls_per_day_by_camp[$source_name] = [];
+            }
+
+            if(!array_key_exists($source_name, $avg_call_duration_by_campaign)){
+                $avg_call_duration_by_campaign[$source_name] = [];
+            }
+
+            if(!array_key_exists($source_name, $durations)){
+                $durations[$source_name] = [];
+            }
+
+            if(!array_key_exists($source_name, $time_hotspots)){
+                $time_hotspots[$source_name] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            }
+
+            if(!array_key_exists($hour, $time_hotspots[$source_name])){
+                $time_hotspots[$source_name][$hour] = 1;
+            } else {
+                $time_hotspots[$source_name][$hour] = $time_hotspots[$source_name][$hour] + 1;
+            }
+
+            $time_hotspots['total'][$hour] = $time_hotspots['total'][$hour] + 1;
+
+            $durations[$source_name][] = $duration_seconds;
+
             $calls_in_selection[$day_index][] = [
                 'id'=> $row->id,
-                'date'=> date('F j, ', $start_time),
+                'date'=> $start_time,
                 'duration'=> $duration,
-                'source_name' => $row->source_name,
+                'source_name' => $source_name,
                 'source_id' => $row->source_id,
                 'caller_name'=> $row->caller_name,
                 'caller_number'=> $row->caller_number,
@@ -82,13 +130,33 @@ class Call_Model extends CI_Model {
             $unique_count = 0;
             if(array_key_exists($date_index, $calls_in_selection)){
                 $call_count = count($calls_in_selection[$date_index]);
-
                 $calls_on_date = $calls_in_selection[$date_index];
+
+                $to_add_to_campaign = [];
                 foreach($calls_on_date as $call){
                     $phones[] = $call['caller_number'];
+
+                    $source_name = $call['source_name'];
+                    if(array_key_exists($source_name, $to_add_to_campaign)){
+                        $to_add_to_campaign[$source_name] = $to_add_to_campaign[$source_name] + 1;
+                    } else {
+                        $to_add_to_campaign[$source_name] = 1;
+                    }
+                }
+
+                foreach($calls_per_day_by_camp as $sName => $array){
+                    if(array_key_exists($sName, $to_add_to_campaign)){
+                        $amount = $to_add_to_campaign[$sName];
+                    } else {
+                        $amount = 0;
+                    }
+
+                    $calls_per_day_by_camp[$sName][] = $amount;
                 }
 
                 $unique_count = count(array_unique($phones));
+
+
             }
 
             $calls_per_day['total_calls'][] = $call_count;
@@ -97,7 +165,30 @@ class Call_Model extends CI_Model {
             $date_index += 86400;
         }
 
-        echo json_encode($calls_per_day);
+        //get avg calls per day by campaign
+        foreach($calls_per_day_by_camp as $campaign => $arr){
+            $avg_calls_per_day_by_campaign[$campaign] = round((array_sum($arr)/count($arr)), 2);
+            $total_calls_by_campaign[$campaign] = array_sum($arr);
+        }
+
+        //get avg duration by campaign
+        foreach($durations as $campaign => $duration_arr){
+            $avg_seconds = round(array_sum($duration_arr)/count($duration_arr), 2);
+            $avg_string = gmdate("H:i:s", $avg_seconds);
+            $avg_call_duration_by_campaign[$campaign] = $avg_string;
+        }
+
+        //time hotspots
+
+
+        $return_array['calls_per_day'] = $calls_per_day;
+        $return_array['calls_per_day_by_camp'] = $calls_per_day_by_camp;
+        $return_array['avg_calls_per_day_by_camp'] = $avg_calls_per_day_by_campaign;
+        $return_array['total_calls_by_camp'] = $total_calls_by_campaign;
+        $return_array['avg_call_duration_by_camp'] = $avg_call_duration_by_campaign;
+        $return_array['time_hotspots'] = $time_hotspots;
+
+        echo json_encode($return_array);
     }
 
 }
