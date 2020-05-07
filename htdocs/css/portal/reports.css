@@ -1,0 +1,88 @@
+#flex-container {
+    display: flex;
+}
+
+
+/* graphs */
+#graphs {
+    flex: 7;
+    height: calc(100vh - 65px);
+    overflow: auto;
+}
+
+#graphs::-webkit-scrollbar {
+    display: none;
+}
+
+#graph_scroller > div {
+    height: 44vh;
+    margin: 3vh 2vw;
+}
+
+.graph_container {
+    box-shadow: 0 0 14px -5px rgba(255, 255, 255, 1) inset;
+    /*background: rgba(65,73,83,0.1);*/
+    background: #1F252D;
+}
+
+.graph_container > div {
+    height: 100%;
+}
+
+#pie_bar_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#pie_bar_container > div {
+    flex: 1;
+}
+
+#pie_bar_container > div:nth-child(2) {
+    margin: 0 2vw;
+}
+
+
+
+/* metrics */
+#metrics {
+    flex: 1;
+    z-index: 2;
+}
+
+#metric_data {
+    height: calc(100vh - 63.5px);
+    background: rgb(35, 47, 61);
+    box-shadow: 1px 0 7px 0 #8aa1b5;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric_container {
+    flex: 1;
+    text-align: center;
+    display: grid;
+    border-bottom: solid 1px #374b58;
+    width: 100%;
+}
+
+.centered_metric {
+    margin: auto;
+}
+
+.centered_metric > div {
+    margin: 1px 15px;
+}
+
+.metric_title {
+    font-size: 3vh;
+    color: #bbecff;
+}
+
+.metric_number {
+    font-size: 2.5vh;
+    padding-top: 1vh;
+    color: #a5bec6
+}

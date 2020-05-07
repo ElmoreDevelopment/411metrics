@@ -42,12 +42,13 @@
     <div id="branding">Sharktek Tracking</div>
     <div id="link-wrap">
         <div id="active-nav"><img src="<?php echo $portal_img; ?>dash-icon.png"><a href="/Portal/dashboard">Dashboard</a></div>
-        <img src="<?php echo $portal_img; ?>pie-icon.png"><a href="/Portal/statistic">Reports</a>
-        <img src="<?php echo $portal_img; ?>manage-icon.png"><a href="/Portal/manage">Manage Campaigns</a></div>
+        <div><img src="<?php echo $portal_img; ?>pie-icon.png"><a href="/Portal/statistic">Reports</a></div>
+        <div><img src="<?php echo $portal_img; ?>manage-icon.png"><a href="/Portal/manage">Manage Campaigns</a></div>
+    </div>
     <div id="nav-user">
-        Welcome alexelmore43_abw@indeedemail.com<br><a href="/Portal/account">Account Settings</a><a
-                href="/Portal/auth/logout">Logout</a></div>
-</div>
+    Welcome alexelmore43_abw@indeedemail.com<br><a href="/Portal/account">Account Settings</a><a
+            href="/Portal/auth/logout">Logout</a></div>
+    </div>
 <div id="nav-accent"></div>
 
 <!-- ===================================== END HEADER ===================================== -->
