@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="" />
+    <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/controllers/Main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Portal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/Call_Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/landing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/portal/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/httpd-app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/httpd-app.conf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="3eb13574-3847-45ff-8bc1-42e12cc5e3ba" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -35,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588774525394</updated>
       <workItem from="1588774526706" duration="5128000" />
+      <workItem from="1588791291164" duration="21988000" />
     </task>
     <servers />
   </component>
@@ -42,6 +58,14 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588812396416" />
+    <state x="371" y="64" key="NewPhpClassDialog" timestamp="1588809141588">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="64" key="NewPhpClassDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588809141588" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1588782904323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -50,5 +74,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="450" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588783183383" />
+    <state x="347" y="73" width="587" height="534" key="find.popup" timestamp="1588792421858">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="347" y="73" width="587" height="534" key="find.popup/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588792421858" />
   </component>
 </project>
