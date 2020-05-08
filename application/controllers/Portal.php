@@ -56,10 +56,26 @@ class Portal extends CI_Controller {
         $this->load->view('portal/reports', $data);
     }
 
+    public function manage() {
+        $this->load->model('campaign_model');
+        $campaigns = $this->campaign_model->get_campaigns_for_user();
+
+        $portal_vars = $this->portal_vars;
+        $data = ['portal_vars' => $portal_vars, 'campaigns' => $campaigns];
+        $this->load->view('portal/manage', $data);
+    }
+
     public function get_calls_for_charts(){
 	    $post = $this->input->post();
 
         $this->load->model('call_model');
         $all_calls = $this->call_model->get_calls_for_charts($post);
+    }
+
+    public function update_campaign(){
+        $post = $this->input->post();
+
+        $this->load->model('campaign_model');
+        $all_calls = $this->campaign_model->update_campaign($post);
     }
 }

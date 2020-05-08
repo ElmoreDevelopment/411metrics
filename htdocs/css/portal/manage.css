@@ -1,0 +1,84 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#campaigns {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+
+    margin: auto;
+}
+
+#content {
+    display: grid;
+    height: calc(100vh - 65px);
+}
+
+#campaign_table {
+    flex: 1;
+    /*box-shadow: 0 0 14px -5px rgba(255, 255, 255, 1) inset;*/
+    /*background: #1F252D;*/
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    color: #91a7b1;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+}
+
+#campaign_table th {
+    background: #0AA2DD;
+    border-radius: 2px;
+    color: #1d242e;
+    font-size: 2vw;
+}
+
+#campaign_table td {
+    font-size: 1vw;
+    color: #293644;
+    height: 5vh;
+}
+
+.save {
+    display: none;
+}
+
+.row_1 {
+    background: #d3ecff;
+}
+
+.row_2 {
+    background: white;
+}
+
+.options {
+    background: none !important;
+}
+
+.camp_edit i {
+    color: white;
+    cursor: pointer;
+}
