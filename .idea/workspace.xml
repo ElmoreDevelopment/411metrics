@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/models/Campaign_Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/portal/manage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htdocs/css/portal/manage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Portal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Portal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/portal/manage.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/manage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htdocs/css/portal/manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/css/portal/manage.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <workItem from="1588829355501" duration="8594000" />
       <workItem from="1588859655980" duration="36412000" />
       <workItem from="1588914662231" duration="10247000" />
-      <workItem from="1588948651593" duration="6180000" />
+      <workItem from="1588948651593" duration="9551000" />
     </task>
     <task id="LOCAL-00001" summary="datatable being fed from MySQL DB">
       <created>1588817118616</created>
@@ -133,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588950332110</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="manage campaigns finished">
+      <created>1588954987963</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588954987963</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,13 +154,14 @@
     <MESSAGE value="charts function correctly" />
     <MESSAGE value="date selection operational" />
     <MESSAGE value="reports page finished minus css touches and code commenting" />
-    <option name="LAST_COMMIT_MESSAGE" value="reports page finished minus css touches and code commenting" />
+    <MESSAGE value="manage campaigns finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="manage campaigns finished" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588950331097">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588954987232">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588950331097" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588954987232" />
     <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

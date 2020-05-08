@@ -75,11 +75,50 @@
                         $row_class = 1;
                     }
                 }
+                echo "<tr id='add_row'><td colspan='3' class='row_$row_class' onclick='addCampaign()'>+ Add Campaign</td>"
             ?>
             </tbody>
         </table>
     </div>
 </div>
+<div id="add_campaign_dialog_container">
+    <div id="add_campaign_dialog">
+        <div id="add_campaign_top_band">
+            <span>Add Campaign</span>
+        </div>
+        <div id="inputs_container">
+            <table id="inputs_table">
+                <tr>
+                    <td>
+                        <label for="camp_name">Name your Campaign:</label>
+                        <input id="camp_name"/>
+                    </td>
+                    <td>
+                        <label for="camp_number">Campaign Number:</label>
+                        <input id="camp_number"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="camp_forward">Forward Calls To:</label>
+                        <input id="camp_forward"/>
+                    </td>
+                    <td>
+                        <label for="camp_city">City, State:</label>
+                        <input id="camp_city"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="submit_new">Submit</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
 
 <!-- END WRAP -->
 <script>
@@ -123,6 +162,10 @@
         });
 
 
+
+    }
+
+    function addCampaign(){
 
     }
 </script>
