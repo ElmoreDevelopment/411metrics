@@ -8,13 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/style.css" media="only screen and (min-width:801px)">
-<!--    <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)" href="style-small.css">-->
-<!--    <link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)" href="style-medium.css">-->
-<!--    <link rel="stylesheet" href="js/slicknav.css">-->
     <!-- JS -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!--    <script type="text/javascript" src="js/response.js"></script>-->
-<!--    <script src="js/jquery.slicknav.min.js"></script>-->
+
 </head>
 <body cz-shortcut-listen="true">
 <div id="main-wrapper">
@@ -33,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a href="#" title="Blog" class="left-nav-link">Blog</a>
                 </li>
                 <li class="main-nav-li">
-                    <a href="/codeigniter/portal/dashboard" title="Log In" class="left-nav-link">Log In</a>
+                    <a href="/codeigniter/index.php/portal/dashboard" title="Log In" class="left-nav-link">Log In</a>
                 </li>
             </ul>
         </nav></header>
