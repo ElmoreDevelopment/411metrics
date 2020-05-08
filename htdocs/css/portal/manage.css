@@ -104,6 +104,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
 }
 
 #add_campaign_dialog {
@@ -132,6 +133,8 @@
     display: grid;
     color: white;
 }
+
+
 
 #inputs_container {
     display: flex;
@@ -173,5 +176,12 @@
 
 #add_campaign_top_band span {
     margin: auto;
+}
+
+#close {
+    position: absolute;
+    right: 1vw;
+    top: 0.5vh;
+    cursor: pointer;
 }
 

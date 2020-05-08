@@ -76,6 +76,13 @@ class Portal extends CI_Controller {
         $post = $this->input->post();
 
         $this->load->model('campaign_model');
-        $all_calls = $this->campaign_model->update_campaign($post);
+        $this->campaign_model->update_campaign($post);
+    }
+
+    public function add_campaign(){
+        $post = $this->input->post();
+
+        $this->load->model('campaign_model');
+        $this->campaign_model->add_campaign($post);
     }
 }

@@ -39,4 +39,27 @@ class Campaign_Model extends CI_Model {
         $query = $this->db->query("UPDATE 411metrics.sources SET `name` = '$name', `campaign_number` = '$number', `forward_to` = '$forward' WHERE id='$id'");
     }
 
+    public function add_campaign($post_data)
+    {
+        if(isset($post_data['name'])){
+            $name = $post_data['name'];
+        }
+
+        if(isset($post_data['number'])){
+            $number = $post_data['number'];
+        }
+
+        if(isset($post_data['forward'])){
+            $forward = $post_data['forward'];
+        }
+
+        if(isset($post_data['city'])){
+            $city = $post_data['city'];
+        }
+
+        $query = $this->db->query("INSERT INTO 411metrics.sources (`name`, `forward_to`, `campaign_number`, `city`) VALUES ('$name', '$forward', '$number', '$city')");
+    }
+
+
+
 }

@@ -85,6 +85,7 @@
     <div id="add_campaign_dialog">
         <div id="add_campaign_top_band">
             <span>Add Campaign</span>
+            <span id="close" onclick="closeClicked()">X</span>
         </div>
         <div id="inputs_container">
             <table id="inputs_table">
@@ -110,7 +111,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button id="submit_new">Submit</button>
+                        <button id="submit_new" onclick="addSubmit()">Submit</button>
                     </td>
                 </tr>
 
@@ -142,9 +143,9 @@
         let forward_td = row.find('.camp_forward');
         let number_td = row.find('.camp_num');
 
-        let name = name_td.find('input').val()
-        let number = number_td.find('input').val()
-        let forward = forward_td.find('input').val()
+        let name = name_td.find('input').val();
+        let number = number_td.find('input').val();
+        let forward = forward_td.find('input').val();
 
         $.ajax({
             url: '/codeigniter/index.php/portal/update_campaign/',
@@ -160,13 +161,31 @@
                 row.find('.edit').show();
             }
         });
-
-
-
     }
 
     function addCampaign(){
+        $('#add_campaign_dialog_container').show();
+    }
 
+    function addSubmit(){
+        let name = $('#camp_name').val();
+        let city = $('#camp_city').val();
+        let number = $('#camp_number').val();
+        let forward = $('#camp_forward').val();
+
+        $.ajax({
+            url: '/codeigniter/index.php/portal/add_campaign/',
+            type: 'POST',
+            data: {name: name, number: number, forward: forward, city: city},
+            success: function(result){
+                $('#add_campaign_dialog_container').hide();
+                window.location.reload();
+            }
+        });
+    }
+
+    function closeClicked(){
+        $('#add_campaign_dialog_container').hide();
     }
 </script>
 
