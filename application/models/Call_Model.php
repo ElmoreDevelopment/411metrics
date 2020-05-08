@@ -128,11 +128,12 @@ class Call_Model extends CI_Model {
             //get calls per day
             $call_count = 0;
             $unique_count = 0;
+            $to_add_to_campaign = [];
             if(array_key_exists($date_index, $calls_in_selection)){
                 $call_count = count($calls_in_selection[$date_index]);
                 $calls_on_date = $calls_in_selection[$date_index];
 
-                $to_add_to_campaign = [];
+
                 foreach($calls_on_date as $call){
                     $phones[] = $call['caller_number'];
 
@@ -144,19 +145,21 @@ class Call_Model extends CI_Model {
                     }
                 }
 
-                foreach($calls_per_day_by_camp as $sName => $array){
-                    if(array_key_exists($sName, $to_add_to_campaign)){
-                        $amount = $to_add_to_campaign[$sName];
-                    } else {
-                        $amount = 0;
-                    }
 
-                    $calls_per_day_by_camp[$sName][] = $amount;
-                }
 
                 $unique_count = count(array_unique($phones));
 
 
+            }
+
+            foreach($calls_per_day_by_camp as $sName => $array){
+                if(array_key_exists($sName, $to_add_to_campaign)){
+                    $amount = $to_add_to_campaign[$sName];
+                } else {
+                    $amount = 0;
+                }
+
+                $calls_per_day_by_camp[$sName][] = $amount;
             }
 
             $calls_per_day['total_calls'][] = $call_count;

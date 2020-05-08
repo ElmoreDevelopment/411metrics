@@ -665,7 +665,7 @@
             }
         },
         title: {
-            text: 'Time Hotspots by Campaign',
+            text: 'Call Volume By Hour',
             style: {
                 color: '#788b94',
                 fontSize: '20px'
@@ -676,14 +676,21 @@
         },
         xAxis: {
             type: 'datetime',
-            tickPixelInterval: 300,
+            tickPixelInterval: 100,
             labels: {
                 style: {
                     color: '#E0E0E3'
                 }
             },
             dateTimeLabelFormats: {
-                day: '%b %e'
+                millisecond: '%l:%M%P',
+                second: '%l:%M%P',
+                minute: '%l:%M%P',
+                hour: '%l:%M%P',
+                day: '%l:%M%P',
+                week: '%l:%M%P',
+                month: '%l:%M%P',
+                year: '%l:%M%P'
             }
         },
         yAxis: {
@@ -737,8 +744,8 @@
     let durations = [];
 
     function updateCharts(){
-        let start_dt = new Date(Date.parse('2017-08-01T18:59:00'));
-        let end_dt = new Date(Date.parse('2017-10-01T18:59:00'));
+        let start_dt = new Date(Date.parse('2017-08-29T18:59:00'));
+        let end_dt = new Date(Date.parse('2017-09-30T18:59:00'));
         let localDt = new Date();
         let start_utcDt = Date.UTC(start_dt.getUTCFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()) / 1000;
         let end_utcDt = end_dt.getTime() / 1000;
@@ -755,6 +762,7 @@
                 parseAvgCallsPerDayByCampaign(return_array['avg_calls_per_day_by_camp']);
                 parseTotalCallsByCampaign(return_array['total_calls_by_camp']);
                 parseAvgCallDurationByCampaign(return_array['avg_call_duration_by_camp'])
+                parseTimeHotspots(return_array['time_hotspots']);
                 console.log(return_array);
             }
         });
@@ -854,6 +862,27 @@
         }
 
         let avg_call_duration_by_camp  = new Highcharts.Chart(avg_call_duration_by_camp_options);
+    }
+
+    function parseTimeHotspots(data){
+        let start_dt = new Date();
+        time_hotspots_options.series = [];
+
+        for(let campaign in data){
+            let points = data[campaign];
+            if(campaign === 'total'){
+                campaign = "All Calls";
+            }
+
+            time_hotspots_options.series.push({
+                name: campaign,
+                data: points,
+                pointStart: Date.UTC(start_dt.getFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()),
+                pointInterval: 3600 * 1000
+            });
+        }
+
+        let time_hotspots = new Highcharts.Chart(time_hotspots_options);
     }
 </script>
 

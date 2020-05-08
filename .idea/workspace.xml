@@ -58,7 +58,8 @@
       <workItem from="1588774526706" duration="5128000" />
       <workItem from="1588791291164" duration="22142000" />
       <workItem from="1588829355501" duration="8594000" />
-      <workItem from="1588859655980" duration="36204000" />
+      <workItem from="1588859655980" duration="36412000" />
+      <workItem from="1588914662231" duration="4590000" />
     </task>
     <task id="LOCAL-00001" summary="datatable being fed from MySQL DB">
       <created>1588817118616</created>
@@ -95,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588891772075</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="all charts except time hotspot operational">
+      <created>1588899386035</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588899386035</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,13 +115,14 @@
     <MESSAGE value="report UI built with exception of date range selector" />
     <MESSAGE value="calls per day calcs" />
     <MESSAGE value="data all being returned for charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="data all being returned for charts" />
+    <MESSAGE value="all charts except time hotspot operational" />
+    <option name="LAST_COMMIT_MESSAGE" value="all charts except time hotspot operational" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588891771259">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588899385219">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588891771259" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588899385219" />
     <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -126,6 +135,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="64" key="NewPhpClassDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588809141588" />
+    <state x="435" y="43" key="RollbackChangesDialog" timestamp="1588917610387">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="435" y="43" key="RollbackChangesDialog/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588917610387" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1588782904323">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
