@@ -43,6 +43,10 @@ class Call_Model extends CI_Model {
             $tz_offset = $post_data['tz_offset'] * 60;
         }
 
+        if($start_date > $end_date){
+            $end_date = time() + 86400;
+        }
+
         if($end_date == 0){
             $end_date = time() + 86400;
         }

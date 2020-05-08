@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Call_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Call_Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/portal/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/reports.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/css/portal/reports.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/css/portal/reports.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,8 @@
       <workItem from="1588791291164" duration="22142000" />
       <workItem from="1588829355501" duration="8594000" />
       <workItem from="1588859655980" duration="36412000" />
-      <workItem from="1588914662231" duration="10123000" />
+      <workItem from="1588914662231" duration="10247000" />
+      <workItem from="1588948651593" duration="1650000" />
     </task>
     <task id="LOCAL-00001" summary="datatable being fed from MySQL DB">
       <created>1588817118616</created>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588919307008</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="date selection operational">
+      <created>1588924901940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588924901940</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,13 +132,14 @@
     <MESSAGE value="data all being returned for charts" />
     <MESSAGE value="all charts except time hotspot operational" />
     <MESSAGE value="charts function correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="charts function correctly" />
+    <MESSAGE value="date selection operational" />
+    <option name="LAST_COMMIT_MESSAGE" value="date selection operational" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588919306035">
+    <state x="264" y="0" key="CommitChangelistDialog2" timestamp="1588924901081">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588919306035" />
+    <state x="264" y="0" key="CommitChangelistDialog2/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1588924901081" />
     <state x="418" y="223" width="444" height="264" key="ComposerInitDialogKey" timestamp="1588812396416">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

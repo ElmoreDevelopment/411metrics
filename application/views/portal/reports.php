@@ -914,10 +914,12 @@
 
     function startDateChanged(input){
         start_date = $(input).val();
-        console.log(start_date);
         if(start_date === '' || start_date === null){
             start_date = 0;
         }
+
+        $('#end_date').val('');
+
         updateCharts();
     }
 
