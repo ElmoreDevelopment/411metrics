@@ -167,7 +167,10 @@ class Call_Model extends CI_Model {
 
         //get avg calls per day by campaign
         foreach($calls_per_day_by_camp as $campaign => $arr){
-            $avg_calls_per_day_by_campaign[$campaign] = round((array_sum($arr)/count($arr)), 2);
+            if(!empty($arr)){
+                $avg_calls_per_day_by_campaign[$campaign] = round((array_sum($arr)/count($arr)), 2);
+            }
+
             $total_calls_by_campaign[$campaign] = array_sum($arr);
         }
 
@@ -175,7 +178,7 @@ class Call_Model extends CI_Model {
         foreach($durations as $campaign => $duration_arr){
             $avg_seconds = round(array_sum($duration_arr)/count($duration_arr), 2);
             $avg_string = gmdate("H:i:s", $avg_seconds);
-            $avg_call_duration_by_campaign[$campaign] = $avg_string;
+            $avg_call_duration_by_campaign[$campaign] = [$avg_seconds, $avg_string];
         }
 
         //time hotspots

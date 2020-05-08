@@ -138,6 +138,7 @@
             type: 'areaspline',
             renderTo: 'calls_per_day',
             plotBorderColor: '#606063',
+            zoomType: 'X'
         },
         colors: ["#434348", "#4FC2F0", "#434348", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
             "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
@@ -173,7 +174,7 @@
         },
         xAxis: {
             type: 'datetime',
-            tickPixelInterval: 300,
+            tickPixelInterval: 100,
             labels: {
                 style: {
                     color: '#E0E0E3'
@@ -276,7 +277,7 @@
         },
         xAxis: {
             type: 'datetime',
-            tickPixelInterval: 300,
+            tickPixelInterval: 100,
             labels: {
                 style: {
                     color: '#E0E0E3'
@@ -392,7 +393,7 @@
             }
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: 'Avg Calls/Day: <b>{point.y:.1f}</b><br>% of Chart: <b>{point.percentage:.0f}%</b>'
         },
         accessibility: {
             point: {
@@ -412,7 +413,8 @@
         series: [{
             name: 'Brands',
             colorByPoint: true,
-            data: [{
+            data: [
+             {
                 name: 'Chrome',
                 y: 61.41,
                 sliced: true,
@@ -497,7 +499,7 @@
             }
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: 'Avg Calls/Day: <b>{point.y:.1f}</b><br>% of Chart: <b>{point.percentage:.0f}%</b>'
         },
         accessibility: {
             point: {
@@ -601,7 +603,12 @@
             }
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '<b>{point.percentage:.1f}%</b><br>Duration: <b>{point.y:.1f}</b>',
+            formatter: function(){
+                let seconds = this.y;
+                let seconds_string = durations[seconds];
+                return this.point.name + "<br><b>" + seconds_string + "</b>";
+            }
         },
         accessibility: {
             point: {
@@ -619,38 +626,8 @@
             }
         },
         series: [{
-            name: 'Brands',
             colorByPoint: true,
-            data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
-            }, {
-                name: 'Internet Explorer',
-                y: 11.84
-            }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Sogou Explorer',
-                y: 1.64
-            }, {
-                name: 'Opera',
-                y: 1.6
-            }, {
-                name: 'QQ',
-                y: 1.2
-            }, {
-                name: 'Other',
-                y: 2.61
-            }]
+            data: []
         }]
     };
     let time_hotspots_options = {
@@ -757,36 +734,126 @@
         ]
     };
 
+    let durations = [];
 
-    $(document).ready(function(){
-        let dt = new Date(Date.parse('2020-05-01T18:59:00'));
+    function updateCharts(){
+        let start_dt = new Date(Date.parse('2017-08-01T18:59:00'));
+        let end_dt = new Date(Date.parse('2017-10-01T18:59:00'));
         let localDt = new Date();
-        let utcDt = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate()) / 1000;
+        let start_utcDt = Date.UTC(start_dt.getUTCFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()) / 1000;
+        let end_utcDt = end_dt.getTime() / 1000;
         let tz_offset = localDt.getTimezoneOffset();
 
         $.ajax({
             url: 'http://10.0.0.27/codeigniter/index.php/portal/get_calls_for_charts/',
             type: 'POST',
-            data: {start_date: utcDt, tz_offset: tz_offset},
+            data: {start_date: start_utcDt, end_date: end_utcDt, tz_offset: tz_offset},
             success: function(result){
                 let return_array = jQuery.parseJSON(result);
-                parseCallsPerDay(return_array['calls_per_day']);
+                parseCallsPerDay(return_array['calls_per_day'], start_dt);
+                parseCallsPerDayByCamp(return_array['calls_per_day_by_camp'], start_dt);
+                parseAvgCallsPerDayByCampaign(return_array['avg_calls_per_day_by_camp']);
+                parseTotalCallsByCampaign(return_array['total_calls_by_camp']);
+                parseAvgCallDurationByCampaign(return_array['avg_call_duration_by_camp'])
                 console.log(return_array);
             }
         });
+    }
 
-       // let calls_per_day = new Highcharts.Chart(calls_per_day_options);
-       // let calls_per_day_by_camp = new Highcharts.Chart(calls_per_day_by_camp_options);
-       // let avg_calls_per_day_by_camp = new Highcharts.Chart(avg_calls_per_day_by_camp_options);
+
+    $(document).ready(function(){
+        updateCharts();
+
        // let total_calls_by_camp = new Highcharts.Chart(total_calls_by_camp_options);
        // let avg_call_duration_by_camp = new Highcharts.Chart(avg_call_duration_by_camp_options);
        // let time_hotspots = new Highcharts.Chart(time_hotspots_options);
     });
 
-    function parseCallsPerDay(calls_per_day){
+    function parseCallsPerDay(calls_per_day, start_dt){
         let total_calls = calls_per_day['total_calls'];
         let unique_calls = calls_per_day['unique_calls'];
+        calls_per_day_options.series = [
+            {
+                name: 'Total Calls',
+                data: total_calls,
+                pointStart: Date.UTC(start_dt.getFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()),
+                pointInterval: 24 * 3600 * 1000
+            },
+            {
+                name: 'Unique Calls',
+                data: unique_calls,
+                pointStart: Date.UTC(start_dt.getFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()),
+                pointInterval: 24 * 3600 * 1000
+            }
+        ];
+        let calls_per_day_chart = new Highcharts.Chart(calls_per_day_options);
+    }
 
+    function parseCallsPerDayByCamp(calls, start_dt){
+        calls_per_day_by_camp_options.series = [];
+
+        for(let campaign in calls){
+            let data = calls[campaign];
+            calls_per_day_by_camp_options.series.push({
+                name: campaign,
+                data: data,
+                pointStart: Date.UTC(start_dt.getFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()),
+                pointInterval: 24 * 3600 * 1000
+            });
+        }
+
+        let calls_per_day_by_camp = new Highcharts.Chart(calls_per_day_by_camp_options);
+
+    }
+
+    function parseAvgCallsPerDayByCampaign(data){
+        console.log(data);
+        avg_calls_per_day_by_camp_options.series[0].data = [];
+        for(let campaign in data){
+            console.log(campaign);
+            let  data_point = data[campaign];
+            avg_calls_per_day_by_camp_options.series[0].data.push(
+                {
+                    name: campaign,
+                    y: data_point
+                }
+            );
+        }
+
+        let avg_calls_per_day_by_camp = new Highcharts.Chart(avg_calls_per_day_by_camp_options);
+    }
+    
+    function parseTotalCallsByCampaign(data){
+        total_calls_by_camp_options.series[0].data = [];
+        for(let campaign in data){
+            let  data_point = data[campaign];
+            total_calls_by_camp_options.series[0].data.push(
+                {
+                    name: campaign,
+                    y: data_point
+                }
+            );
+        }
+
+        let total_calls_by_camp = new Highcharts.Chart(total_calls_by_camp_options);
+    }
+
+    function parseAvgCallDurationByCampaign(data){
+        avg_call_duration_by_camp_options.series[0].data = [];
+        for(let campaign in data){
+            let seconds_array = data[campaign];
+            let seconds = seconds_array[0];
+            let seconds_string = seconds_array[1];
+            durations[seconds] = seconds_string;
+            avg_call_duration_by_camp_options.series[0].data.push(
+                {
+                    name: campaign,
+                    y: seconds,
+                }
+            );
+        }
+
+        let avg_call_duration_by_camp  = new Highcharts.Chart(avg_call_duration_by_camp_options);
     }
 </script>
 
