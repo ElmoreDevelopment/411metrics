@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e9ea67de-d4cd-44c9-9d8f-3a7444e67955" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Portal.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Portal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Campaign_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Campaign_Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/landing.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/landing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/portal/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/portal/manage.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/manage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htdocs/css/portal/manage.css" beforeDir="false" afterPath="$PROJECT_DIR$/htdocs/css/portal/manage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/portal/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/portal/reports.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
