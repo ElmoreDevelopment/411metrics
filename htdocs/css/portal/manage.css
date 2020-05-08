@@ -1,0 +1,187 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#campaigns {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+
+    margin: auto;
+}
+
+#content {
+    display: grid;
+    height: calc(100vh - 65px);
+}
+
+#campaign_table {
+    flex: 1;
+    /*box-shadow: 0 0 14px -5px rgba(255, 255, 255, 1) inset;*/
+    /*background: #1F252D;*/
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    color: #91a7b1;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+}
+
+#campaign_table th {
+    background: #0AA2DD;
+    border-radius: 2px;
+    color: #1d242e;
+    font-size: 2vw;
+}
+
+#campaign_table td {
+    font-size: 1vw;
+    color: #293644;
+    height: 5vh;
+}
+
+.save {
+    display: none;
+}
+
+.row_1 {
+    background: #d3ecff;
+}
+
+.row_2 {
+    background: white;
+}
+
+
+#add_row td {
+    cursor: pointer;
+}
+
+#add_row td:hover {
+    background: #406071;
+    color: white;
+}
+
+.options {
+    background: none !important;
+}
+
+.camp_edit i {
+    color: white;
+    cursor: pointer;
+}
+
+.camp_edit i:hover {
+    color: #8be2ee;
+}
+
+#add_campaign_dialog_container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.93);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#add_campaign_dialog {
+    position: fixed;
+    top: 30vh;
+    left: 27.5vw;
+    width: 45vw;
+    background: #ccd7e2;
+    height: 40vh;
+    z-index: 4;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.49);
+}
+
+#add_campaign_top_band {
+    width: 100%;
+    height: 10%;
+    font-size: 2vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e2b3a+0,6d7c91+100 */
+    background: #0e2b3a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0e2b3a 0%, #6d7c91 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #0e2b3a 0%,#6d7c91 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #0e2b3a 0%,#6d7c91 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2b3a', endColorstr='#6d7c91',GradientType=0 ); /* IE6-9 */
+    text-align: center;
+    display: grid;
+    color: white;
+}
+
+
+
+#inputs_container {
+    display: flex;
+    padding: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#inputs_table td{
+    padding: 2vh;
+}
+
+#inputs_table input {
+    width: 100%;
+}
+
+#inputs_table tr:last-child td {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+#inputs_table button {
+    width: 50%;
+    height: 4vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0e2b3a+0,6d7c91+100 */
+    background: #0e2b3a; /* Old browsers */
+    background: -moz-linear-gradient(top,  #0e2b3a 0%, #6d7c91 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #0e2b3a 0%,#6d7c91 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #0e2b3a 0%,#6d7c91 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2b3a', endColorstr='#6d7c91',GradientType=0 ); /* IE6-9 */
+    color: white;
+    font-size: 1.8vh;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+}
+
+#add_campaign_top_band span {
+    margin: auto;
+}
+
+#close {
+    position: absolute;
+    right: 1vw;
+    top: 0.5vh;
+    cursor: pointer;
+}
+
