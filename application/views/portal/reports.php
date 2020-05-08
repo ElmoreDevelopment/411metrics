@@ -56,6 +56,9 @@
     <div id="flex-container">
         <div id="graphs">
             <div id="graph_scroller">
+                <div id="calls_per_day_container" class="date_container">
+                    <div>From <input type="date" id="start_date" onchange="startDateChanged(this)"/> to <input type="date" id="end_date" onchange="endDateChanged(this)"/></div>
+                </div>
                 <div id="calls_per_day_container" class="graph_container">
                     <div id="calls_per_day"></div>
                 </div>
@@ -80,40 +83,40 @@
         </div>
         <div id="metrics">
             <div id="metric_data">
-                <div class="metric_container">
+                <div class="metric_container" id="metric_total_calls">
                     <div class="centered_metric">
                         <div class="metric_title">Total Calls</div>
                         <div class="metric_number">456</div>
                     </div>
                 </div>
-                <div class="metric_container">
+                <div class="metric_container" id="metric_unique_calls">
                     <div class="centered_metric">
                         <div class="metric_title">Total Unique Calls</div>
                         <div class="metric_number">345</div>
                     </div>
                 </div>
-                <div class="metric_container">
+                <div class="metric_container" id="metric_perc_unique">
+                    <div class="centered_metric">
+                        <div class="metric_title">% Unique Calls</div>
+                        <div class="metric_number">65.3%</div>
+                    </div>
+                </div>
+                <div class="metric_container" id="metric_total_minutes">
                     <div class="centered_metric">
                         <div class="metric_title">Total Minutes Used</div>
                         <div class="metric_number">10,000,000</div>
                     </div>
                 </div>
-                <div class="metric_container">
+                <div class="metric_container" id="metric_avg_duration">
                     <div class="centered_metric">
                         <div class="metric_title">Average Call Duration</div>
                         <div class="metric_number">00:00:30</div>
                     </div>
                 </div>
-                <div class="metric_container">
+                <div class="metric_container" id="metric_longest_call">
                     <div class="centered_metric">
                         <div class="metric_title">Longest Call</div>
                         <div class="metric_number">02:05:53</div>
-                    </div>
-                </div>
-                <div class="metric_container">
-                    <div class="centered_metric">
-                        <div class="metric_title">% Unique Calls</div>
-                        <div class="metric_number">65.3%</div>
                     </div>
                 </div>
             </div>
@@ -740,19 +743,33 @@
             }
         ]
     };
+    let start_date = '2017-08-29';
+    let end_date = '2017-09-30';
 
     let durations = [];
 
     function updateCharts(){
-        let start_dt = new Date(Date.parse('2017-08-29T18:59:00'));
-        let end_dt = new Date(Date.parse('2017-09-30T18:59:00'));
+        let start_dt;
+        if(start_date !== 0){
+            start_dt = new Date(Date.parse(start_date + 'T18:59:00'));
+        } else {
+            start_dt = new Date(Date.parse('2017-01-01T18:59:00'));
+        }
+
+        let end_dt;
+        if(end_date !== 0){
+            end_dt = new Date(Date.parse(end_date + 'T18:59:00'));
+        } else {
+            end_dt = new Date();
+        }
+
         let localDt = new Date();
         let start_utcDt = Date.UTC(start_dt.getUTCFullYear(), start_dt.getUTCMonth(), start_dt.getUTCDate()) / 1000;
         let end_utcDt = end_dt.getTime() / 1000;
         let tz_offset = localDt.getTimezoneOffset();
 
         $.ajax({
-            url: 'http://10.0.0.27/codeigniter/index.php/portal/get_calls_for_charts/',
+            url: '/codeigniter/index.php/portal/get_calls_for_charts/',
             type: 'POST',
             data: {start_date: start_utcDt, end_date: end_utcDt, tz_offset: tz_offset},
             success: function(result){
@@ -763,6 +780,7 @@
                 parseTotalCallsByCampaign(return_array['total_calls_by_camp']);
                 parseAvgCallDurationByCampaign(return_array['avg_call_duration_by_camp'])
                 parseTimeHotspots(return_array['time_hotspots']);
+                parseMetrics(return_array['metrics']);
                 console.log(return_array);
             }
         });
@@ -770,11 +788,10 @@
 
 
     $(document).ready(function(){
-        updateCharts();
+        $('#start_date').val(start_date);
+        $('#end_date').val(end_date);
 
-       // let total_calls_by_camp = new Highcharts.Chart(total_calls_by_camp_options);
-       // let avg_call_duration_by_camp = new Highcharts.Chart(avg_call_duration_by_camp_options);
-       // let time_hotspots = new Highcharts.Chart(time_hotspots_options);
+        updateCharts();
     });
 
     function parseCallsPerDay(calls_per_day, start_dt){
@@ -883,6 +900,33 @@
         }
 
         let time_hotspots = new Highcharts.Chart(time_hotspots_options);
+    }
+
+    function parseMetrics(data){
+        //total calls
+        $('#metric_total_calls').find('.metric_number').text(data['total_calls']);
+        $('#metric_unique_calls').find('.metric_number').text(data['unique_calls']);
+        $('#metric_perc_unique').find('.metric_number').text(data['unique_percentage'] + "%");
+        $('#metric_longest_call').find('.metric_number').text(data['longest_call']);
+        $('#metric_total_minutes').find('.metric_number').text(data['minutes_used']);
+        $('#metric_avg_duration').find('.metric_number').text(data['avg_call_duration']);
+    }
+
+    function startDateChanged(input){
+        start_date = $(input).val();
+        console.log(start_date);
+        if(start_date === '' || start_date === null){
+            start_date = 0;
+        }
+        updateCharts();
+    }
+
+    function endDateChanged(input){
+        end_date = $(input).val();
+        if(end_date === '' || end_date === null){
+            end_date = 0;
+        }
+        updateCharts();
     }
 </script>
 

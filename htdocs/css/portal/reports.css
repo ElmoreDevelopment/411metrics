@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 /* graphs */
 #graphs {
     flex: 7;
@@ -14,6 +13,10 @@
     display: none;
 }
 
+#graph_scroller {
+    padding-top: 8vh;
+}
+
 #graph_scroller > div {
     height: 44vh;
     margin: 3vh 2vw;
@@ -21,12 +24,44 @@
 
 .graph_container {
     box-shadow: 0 0 14px -5px rgba(255, 255, 255, 1) inset;
-    /*background: rgba(65,73,83,0.1);*/
     background: #1F252D;
 }
 
 .graph_container > div {
     height: 100%;
+}
+
+.date_container {
+    box-shadow: 0px 5px 7px -5px rgba(183, 183, 183, 0.44);
+    background: #1f252d !important;
+    height: 8vh !important;
+    text-align: center;
+    color: #bbecff;
+    display: grid;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    position: absolute;
+    margin: 0 0 !important;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+.date_container > div {
+    margin: auto;
+}
+
+.date_container > div > input {
+    background-color: #6e9aa3;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+    bottom: 3px;
+    font-size: 2vh;
+    width: 10vw;
+    padding-left: 0.5vw;
 }
 
 #pie_bar_container {
@@ -43,11 +78,10 @@
 }
 
 
-
 /* metrics */
 #metrics {
     flex: 1;
-    z-index: 2;
+    z-index:5;
 }
 
 #metric_data {

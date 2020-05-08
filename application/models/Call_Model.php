@@ -56,8 +56,7 @@ class Call_Model extends CI_Model {
         ];
 
         $return_array = [
-            'calls_per_day' => [],
-            'calls_per_day_by_camp' => []
+
         ];
 
         $calls_per_day_by_camp = [];
@@ -70,13 +69,19 @@ class Call_Model extends CI_Model {
 
         $durations = [];
 
+
+        $longest_call = 0;
+        $total_call_duration = 0;
         foreach($query->result() as $row){
             $start_time = $row->start_time;
             $end_time = $row->end_time;
             $duration_seconds = $end_time - $start_time;
-
+            $total_call_duration = $total_call_duration + $duration_seconds;
             $start_time_minus_offset = $start_time - $tz_offset;
             $hour = date("g", $start_time_minus_offset);
+            if($duration_seconds > $longest_call) {
+                $longest_call = $duration_seconds;
+            }
 
             $duration = gmdate("H:i:s", $duration_seconds);
             $source_name = $row->source_name;
@@ -184,8 +189,8 @@ class Call_Model extends CI_Model {
             $avg_call_duration_by_campaign[$campaign] = [$avg_seconds, $avg_string];
         }
 
-        //time hotspots
-
+        $minutes_used = $total_call_duration / 60;
+        $avg_duration_seconds = round($total_call_duration / array_sum($calls_per_day['total_calls']), 1);
 
         $return_array['calls_per_day'] = $calls_per_day;
         $return_array['calls_per_day_by_camp'] = $calls_per_day_by_camp;
@@ -193,6 +198,12 @@ class Call_Model extends CI_Model {
         $return_array['total_calls_by_camp'] = $total_calls_by_campaign;
         $return_array['avg_call_duration_by_camp'] = $avg_call_duration_by_campaign;
         $return_array['time_hotspots'] = $time_hotspots;
+        $return_array['metrics']['total_calls'] = array_sum($calls_per_day['total_calls']);
+        $return_array['metrics']['unique_calls'] = array_sum($calls_per_day['unique_calls']);
+        $return_array['metrics']['unique_percentage'] = round(array_sum($calls_per_day['unique_calls']) / array_sum($calls_per_day['total_calls']), 3) * 100;
+        $return_array['metrics']['minutes_used'] = round($minutes_used, 1);
+        $return_array['metrics']['longest_call'] = gmdate("H:i:s", $longest_call);
+        $return_array['metrics']['avg_call_duration'] = gmdate("H:i:s", $avg_duration_seconds);
 
         echo json_encode($return_array);
     }
